@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Zulip Enhanced",
+  "version": "0.1.0",
+  "description": "Enhanced Zulip experience",
+  "icons": {
+    "16": "images/iconx1.png",
+    "32": "images/iconx2.png",
+    "48": "images/iconx2.png",
+    "128": "images/iconx3.png"
+  },
+  "action": {
+    "default_icon": "images/iconx1.png",
+    "default_title": "Zulip Enhanced"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://we.knowecon.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
